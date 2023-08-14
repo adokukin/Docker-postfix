@@ -11,6 +11,8 @@ COPY ./conf/ /etc/opendkim/
 RUN mkdir /etc/opendkim/keys
 
 # startup
-CMD /usr/sbin/opendkim -x /etc/opendkim/opendkim.conf -f
+ADD startup.bash /startup.bash
+RUN chmod +x /startup.bash
+CMD /startup.bash
 
 EXPOSE 12301
