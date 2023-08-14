@@ -44,4 +44,4 @@ if [[ ! -f "/etc/postfix/aliases.lmdb" ]]; then
     echo
 fi
 
-/usr/bin/supervisord -c /etc/supervisor.conf -n
+/usr/bin/supervisord -c /etc/supervisor.conf
