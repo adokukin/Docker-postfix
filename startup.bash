@@ -45,6 +45,3 @@ if [[ ! -f "/etc/postfix/aliases.lmdb" ]]; then
     newaliases
     echo
 fi
-
-echo -e "\e[32mTailing /var/log/mail.log ...\e[0m"
-touch /var/log/mail.log; tail -f /var/log/mail.log

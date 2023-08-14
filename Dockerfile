@@ -6,6 +6,9 @@ RUN \
 	apk upgrade --no-cache && \
 	apk add --no-cache rsyslog bash supervisor postfix opendkim opendkim-utils ca-certificates
 
+# rsyslog
+COPY conf/rsyslog.conf /etc/rsyslog.conf
+
 # postfix
 COPY conf/postfix.conf /etc/postfix/main-override.cf
 RUN \
