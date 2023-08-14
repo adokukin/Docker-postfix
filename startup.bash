@@ -38,10 +38,10 @@ echo
 chown -R opendkim:opendkim /etc/opendkim
 chmod -R 0700 /etc/opendkim/keys
 
-/usr/bin/supervisord -c /etc/supervisor.conf
-
 if [[ ! -f "/etc/postfix/aliases.lmdb" ]]; then
     echo -e "\e[32mInitialize the alias database.\e[0m"
     newaliases
     echo
 fi
+
+/usr/bin/supervisord -c /etc/supervisor.conf -n
