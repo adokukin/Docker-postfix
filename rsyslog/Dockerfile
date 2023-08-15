@@ -11,5 +11,3 @@ COPY rsyslog.conf /etc/rsyslog.conf
 
 # startup
 CMD rsyslogd -n
-VOLUME /dev
-VOLUME /var/log
